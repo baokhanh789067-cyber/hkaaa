@@ -1,0 +1,92 @@
+2026-01-28 00:22:57,802 - __main__ - INFO - Arguments: Namespace(adapter_config='lora', adapter_reduction_factor=0, batch_size=64, checkpoint=None, climb_data_dir='', comm_rounds=30, debug=0, do_eval=True, do_single=False, do_test=True, do_train=True, do_wandb_logging=True, encoder_name='vilt', layers_to_freeze=0, local_epochs=1, lora_alpha=16, lora_r=8, lr=0.0001, model_path='./models', num_epochs=15, num_workers=8, optimizer_mode='dat', ordered_cl_tasks='domain', output_dir='./logs/64_batch_1_GPU', portion=1.0, pretrained_model_name='./models/vilt-b32-mlm', seed=1, splits=['train_small', 'val', 'test_small'], val_batch_size=128, visual_input_type='pil-image', wandb_freq=5)
+2026-01-28 00:22:57,802 - __main__ - INFO - ----------------------------------------------------------------------------------------------------
+2026-01-28 00:22:57,802 - __main__ - INFO - Loading ViLT encoder model: ./models/vilt-b32-mlm
+2026-01-28 00:22:58,953 - __main__ - INFO - Successfully loaded pretrained ViLT encoder
+2026-01-28 00:22:58,983 - __main__ - INFO - Successfully created and initialized ViLT Continual Leaner model
+2026-01-28 00:22:59,045 - __main__ - INFO - Succesfully initialized ViLT-based Continual Learner
+2026-01-28 00:22:59,045 - __main__ - INFO - 4 task heads: art,abstract,toronto,gqa
+2026-01-28 00:22:59,045 - __main__ - INFO - CL Algorithm: sequential_ft
+2026-01-28 00:22:59,046 - __main__ - INFO - Total Parameters: 117.54M
+2026-01-28 00:22:59,046 - __main__ - INFO - Trainable Parameters: 5.94M (5.06%)
+2026-01-28 00:22:59,047 - __main__ - INFO - Model checkpoints sa+ved to ./logs/64_batch_1_GPU
+2026-01-28 00:22:59,047 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-28 00:22:59,047 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-28 00:22:59,047 - __main__ - INFO - Training models on Vision-Language continual learning tasks...
+2026-01-28 00:22:59,344 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-28 00:22:59,637 - __main__ - INFO - Training vilt model on task #1: art
+2026-01-28 00:22:59,637 - __main__ - INFO - W&B project: CARVEN, experiment: 64_batch_1_GPU
+2026-01-28 00:23:02,196 - __main__ - INFO - Loaded AQUA train_small dataset, len:2518
+2026-01-28 00:23:02,196 - __main__ - INFO - Dataset for ViLT domain:art, split:train_small, len:2518, bs:64
+2026-01-28 00:23:02,199 - __main__ - INFO - Loaded AQUA val dataset, len:506
+2026-01-28 00:23:02,199 - __main__ - INFO - Dataset for ViLT domain:art, split:val, len:506, bs:64
+2026-01-28 00:23:02,200 - __main__ - INFO - Loaded AQUA test_small dataset, len:503
+2026-01-28 00:23:02,201 - __main__ - INFO - Dataset for ViLT domain:art, split:test_small, len:503, bs:64
+2026-01-28 00:25:51,749 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-28 00:25:51,974 - __main__ - INFO - Training vilt model on task #2: abstract
+2026-01-28 00:25:51,974 - __main__ - INFO - W&B project: CARVEN, experiment: 64_batch_1_GPU
+2026-01-28 00:25:52,041 - __main__ - INFO - Loaded VQA abstract train_small dataset, len:2476
+2026-01-28 00:25:52,041 - __main__ - INFO - Dataset for ViLT domain:abstract, split:train_small, len:2476, bs:64
+2026-01-28 00:25:52,042 - __main__ - INFO - Loaded VQA abstract val dataset, len:482
+2026-01-28 00:25:52,042 - __main__ - INFO - Dataset for ViLT domain:abstract, split:val, len:482, bs:64
+2026-01-28 00:25:52,044 - __main__ - INFO - Loaded VQA abstract test_small dataset, len:508
+2026-01-28 00:25:52,044 - __main__ - INFO - Dataset for ViLT domain:abstract, split:test_small, len:508, bs:64
+2026-01-28 00:28:13,651 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-28 00:28:13,895 - __main__ - INFO - Training vilt model on task #3: toronto
+2026-01-28 00:28:13,896 - __main__ - INFO - W&B project: CARVEN, experiment: 64_batch_1_GPU
+2026-01-28 00:28:14,145 - __main__ - INFO - Loaded toronto train_small dataset, len:2487
+2026-01-28 00:28:14,146 - __main__ - INFO - Dataset for ViLT domain:toronto, split:train_small, len:2487, bs:64
+2026-01-28 00:28:14,147 - __main__ - INFO - Loaded toronto val dataset, len:491
+2026-01-28 00:28:14,147 - __main__ - INFO - Dataset for ViLT domain:toronto, split:val, len:491, bs:64
+2026-01-28 00:28:14,149 - __main__ - INFO - Loaded toronto test_small dataset, len:509
+2026-01-28 00:28:14,149 - __main__ - INFO - Dataset for ViLT domain:toronto, split:test_small, len:509, bs:64
+2026-01-28 00:30:53,120 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-28 00:30:53,360 - __main__ - INFO - Training vilt model on task #4: gqa
+2026-01-28 00:30:53,361 - __main__ - INFO - W&B project: CARVEN, experiment: 64_batch_1_GPU
+2026-01-28 00:30:53,369 - __main__ - INFO - Loaded VQAv2 train_small dataset, len:2534
+2026-01-28 00:30:53,370 - __main__ - INFO - Dataset for ViLT domain:gqa, split:train_small, len:2534, bs:64
+2026-01-28 00:30:53,371 - __main__ - INFO - Loaded VQAv2 val dataset, len:533
+2026-01-28 00:30:53,371 - __main__ - INFO - Dataset for ViLT domain:gqa, split:val, len:533, bs:64
+2026-01-28 00:30:53,373 - __main__ - INFO - Loaded VQAv2 test_small dataset, len:542
+2026-01-28 00:30:53,373 - __main__ - INFO - Dataset for ViLT domain:gqa, split:test_small, len:542, bs:64
+2026-01-28 00:33:35,428 - __main__ - INFO - W&B project: CARVEN, experiment: 64_batch_1_GPU
+2026-01-28 00:33:35,474 - __main__ - INFO - Loaded AQUA train_small dataset, len:2518
+2026-01-28 00:33:35,474 - __main__ - INFO - Dataset for ViLT domain:art, split:train_small, len:2518, bs:64
+2026-01-28 00:33:35,475 - __main__ - INFO - Loaded AQUA val dataset, len:506
+2026-01-28 00:33:35,475 - __main__ - INFO - Dataset for ViLT domain:art, split:val, len:506, bs:64
+2026-01-28 00:33:35,477 - __main__ - INFO - Loaded AQUA test_small dataset, len:503
+2026-01-28 00:33:35,477 - __main__ - INFO - Dataset for ViLT domain:art, split:test_small, len:503, bs:64
+2026-01-28 00:34:13,056 - __main__ - INFO - art test score server = [27.236580516898606, 27.236580516898606, 28.429423459244536]
+2026-01-28 00:34:13,104 - __main__ - INFO - W&B project: CARVEN, experiment: 64_batch_1_GPU
+2026-01-28 00:34:13,169 - __main__ - INFO - Loaded VQA abstract train_small dataset, len:2476
+2026-01-28 00:34:13,169 - __main__ - INFO - Dataset for ViLT domain:abstract, split:train_small, len:2476, bs:64
+2026-01-28 00:34:13,171 - __main__ - INFO - Loaded VQA abstract val dataset, len:482
+2026-01-28 00:34:13,171 - __main__ - INFO - Dataset for ViLT domain:abstract, split:val, len:482, bs:64
+2026-01-28 00:34:13,173 - __main__ - INFO - Loaded VQA abstract test_small dataset, len:508
+2026-01-28 00:34:13,173 - __main__ - INFO - Dataset for ViLT domain:abstract, split:test_small, len:508, bs:64
+2026-01-28 00:34:46,620 - __main__ - INFO - abstract test score server = [38.267716835802936, 39.665354706170994, 38.267717211265264]
+2026-01-28 00:34:46,666 - __main__ - INFO - W&B project: CARVEN, experiment: 64_batch_1_GPU
+2026-01-28 00:34:46,909 - __main__ - INFO - Loaded toronto train_small dataset, len:2487
+2026-01-28 00:34:46,910 - __main__ - INFO - Dataset for ViLT domain:toronto, split:train_small, len:2487, bs:64
+2026-01-28 00:34:46,911 - __main__ - INFO - Loaded toronto val dataset, len:491
+2026-01-28 00:34:46,911 - __main__ - INFO - Dataset for ViLT domain:toronto, split:val, len:491, bs:64
+2026-01-28 00:34:46,913 - __main__ - INFO - Loaded toronto test_small dataset, len:509
+2026-01-28 00:34:46,913 - __main__ - INFO - Dataset for ViLT domain:toronto, split:test_small, len:509, bs:64
+2026-01-28 00:35:22,746 - __main__ - INFO - toronto test score server = [4.12573673870334, 4.322200392927308, 4.12573673870334]
+2026-01-28 00:35:22,814 - __main__ - INFO - W&B project: CARVEN, experiment: 64_batch_1_GPU
+2026-01-28 00:35:22,823 - __main__ - INFO - Loaded VQAv2 train_small dataset, len:2534
+2026-01-28 00:35:22,824 - __main__ - INFO - Dataset for ViLT domain:gqa, split:train_small, len:2534, bs:64
+2026-01-28 00:35:22,825 - __main__ - INFO - Loaded VQAv2 val dataset, len:533
+2026-01-28 00:35:22,825 - __main__ - INFO - Dataset for ViLT domain:gqa, split:val, len:533, bs:64
+2026-01-28 00:35:22,827 - __main__ - INFO - Loaded VQAv2 test_small dataset, len:542
+2026-01-28 00:35:22,827 - __main__ - INFO - Dataset for ViLT domain:gqa, split:test_small, len:542, bs:64
+2026-01-28 00:35:59,955 - __main__ - INFO - gqa test score server = [28.893058161350844, 27.204502814258912, 28.893058161350844]
+2026-01-28 00:36:00,003 - __main__ - INFO - Round 0: Avg test score server = 0.00
+2026-01-28 00:36:00,004 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-28 00:36:00,104 - __main__ - INFO - Training vilt model on task #1: art
+2026-01-28 00:36:00,104 - __main__ - INFO - W&B project: CARVEN, experiment: 64_batch_1_GPU
+2026-01-28 00:36:00,153 - __main__ - INFO - Loaded AQUA train_small dataset, len:2518
+2026-01-28 00:36:00,153 - __main__ - INFO - Dataset for ViLT domain:art, split:train_small, len:2518, bs:64
+2026-01-28 00:36:00,155 - __main__ - INFO - Loaded AQUA val dataset, len:506
+2026-01-28 00:36:00,155 - __main__ - INFO - Dataset for ViLT domain:art, split:val, len:506, bs:64
+2026-01-28 00:36:00,157 - __main__ - INFO - Loaded AQUA test_small dataset, len:503
+2026-01-28 00:36:00,157 - __main__ - INFO - Dataset for ViLT domain:art, split:test_small, len:503, bs:64

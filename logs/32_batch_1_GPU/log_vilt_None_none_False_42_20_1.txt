@@ -1,0 +1,4 @@
+2026-01-24 00:59:25,123 - __main__ - INFO - Arguments: Namespace(adapter_config=None, adapter_reduction_factor=0, batch_size=32, checkpoint=None, climb_data_dir='', comm_rounds=20, debug=0, do_eval=False, do_single=False, do_test=False, do_train=True, do_wandb_logging=False, encoder_name='vilt', layers_to_freeze=0, local_epochs=1, lr=None, model_path='./models', num_epochs=15, num_workers=10, optimizer_mode='none', ordered_cl_tasks=None, output_dir='./logs/32_batch_1_GPU', portion=1.0, pretrained_model_name='./models/vilt-b32-mlm', seed=42, splits=['train', 'val'], val_batch_size=1, visual_input_type='pil-image', wandb_freq=100)
+2026-01-24 00:59:25,123 - __main__ - INFO - ----------------------------------------------------------------------------------------------------
+2026-01-24 00:59:25,123 - __main__ - INFO - Loading ViLT encoder model: ./models/vilt-b32-mlm
+2026-01-24 00:59:36,356 - __main__ - INFO - Successfully loaded pretrained ViLT encoder

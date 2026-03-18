@@ -1,0 +1,5 @@
+2026-01-23 23:51:55,189 - __main__ - INFO - Arguments: Namespace(adapter_config='pfeiffer', adapter_reduction_factor=16, batch_size=2, checkpoint=None, climb_data_dir='', comm_rounds=30, debug=0, do_eval=False, do_single=False, do_test=False, do_train=True, do_wandb_logging=False, encoder_name='vilt', layers_to_freeze=0, local_epochs=1, lr=0.0001, model_path='./models', num_epochs=15, num_workers=2, optimizer_mode='dat', ordered_cl_tasks='domain', output_dir='./logs/2_batch_0_GPU', portion=1.0, pretrained_model_name='./models/vilt-b32-mlm', seed=1, splits=['train_small', 'val', 'test_small'], val_batch_size=2, visual_input_type='pil-image', wandb_freq=100)
+2026-01-23 23:51:55,190 - __main__ - INFO - ----------------------------------------------------------------------------------------------------
+2026-01-23 23:51:55,190 - __main__ - INFO - Loading ViLT encoder model: ./models/vilt-b32-mlm
+2026-01-23 23:52:06,541 - __main__ - INFO - Successfully loaded pretrained ViLT encoder
+2026-01-23 23:52:06,573 - __main__ - INFO - Successfully created and initialized ViLT Continual Leaner model

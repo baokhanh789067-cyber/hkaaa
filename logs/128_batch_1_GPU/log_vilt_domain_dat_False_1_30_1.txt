@@ -1,0 +1,30 @@
+2026-01-24 01:04:56,140 - __main__ - INFO - Arguments: Namespace(adapter_config='pfeiffer', adapter_reduction_factor=16, batch_size=128, checkpoint=None, climb_data_dir='', comm_rounds=30, debug=0, do_eval=False, do_single=False, do_test=False, do_train=True, do_wandb_logging=False, encoder_name='vilt', layers_to_freeze=0, local_epochs=1, lr=0.0001, model_path='./models', num_epochs=15, num_workers=10, optimizer_mode='dat', ordered_cl_tasks='domain', output_dir='./logs/128_batch_1_GPU', portion=1.0, pretrained_model_name='./models/vilt-b32-mlm', seed=1, splits=['train_small', 'val', 'test_small'], val_batch_size=128, visual_input_type='pil-image', wandb_freq=100)
+2026-01-24 01:04:56,140 - __main__ - INFO - ----------------------------------------------------------------------------------------------------
+2026-01-24 01:04:56,140 - __main__ - INFO - Loading ViLT encoder model: ./models/vilt-b32-mlm
+2026-01-24 01:05:07,506 - __main__ - INFO - Successfully loaded pretrained ViLT encoder
+2026-01-24 01:05:07,539 - __main__ - INFO - Successfully created and initialized ViLT Continual Leaner model
+2026-01-24 01:05:13,456 - __main__ - INFO - Succesfully initialized ViLT-based Continual Learner
+2026-01-24 01:05:13,456 - __main__ - INFO - 4 task heads: art,abstract,toronto,gqa
+2026-01-24 01:05:13,456 - __main__ - INFO - CL Algorithm: sequential_ft
+2026-01-24 01:05:13,458 - __main__ - INFO - Total Parameters: 119.63M
+2026-01-24 01:05:13,458 - __main__ - INFO - Trainable Parameters: 8.04M (6.72%)
+2026-01-24 01:05:13,459 - __main__ - INFO - Model checkpoints sa+ved to ./logs/128_batch_1_GPU
+2026-01-24 01:05:13,459 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-24 01:05:13,459 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-24 01:05:13,459 - __main__ - INFO - Training models on Vision-Language continual learning tasks...
+2026-01-24 01:05:14,122 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-24 01:05:14,496 - __main__ - INFO - Training vilt model on task #1: art
+2026-01-24 01:05:14,542 - __main__ - INFO - Loaded AQUA train_small dataset, len:2518
+2026-01-24 01:05:14,542 - __main__ - INFO - Dataset for ViLT domain:art, split:train_small, len:2518, bs:128
+2026-01-24 01:05:14,543 - __main__ - INFO - Loaded AQUA val dataset, len:506
+2026-01-24 01:05:14,543 - __main__ - INFO - Dataset for ViLT domain:art, split:val, len:506, bs:128
+2026-01-24 01:05:14,544 - __main__ - INFO - Loaded AQUA test_small dataset, len:503
+2026-01-24 01:05:14,544 - __main__ - INFO - Dataset for ViLT domain:art, split:test_small, len:503, bs:128
+2026-01-24 01:08:00,199 - __main__ - INFO - --------------------------------------------------------------------------------
+2026-01-24 01:08:00,460 - __main__ - INFO - Training vilt model on task #2: abstract
+2026-01-24 01:08:00,523 - __main__ - INFO - Loaded VQA abstract train_small dataset, len:2476
+2026-01-24 01:08:00,523 - __main__ - INFO - Dataset for ViLT domain:abstract, split:train_small, len:2476, bs:128
+2026-01-24 01:08:00,524 - __main__ - INFO - Loaded VQA abstract val dataset, len:482
+2026-01-24 01:08:00,524 - __main__ - INFO - Dataset for ViLT domain:abstract, split:val, len:482, bs:128
+2026-01-24 01:08:00,526 - __main__ - INFO - Loaded VQA abstract test_small dataset, len:508
+2026-01-24 01:08:00,526 - __main__ - INFO - Dataset for ViLT domain:abstract, split:test_small, len:508, bs:128
