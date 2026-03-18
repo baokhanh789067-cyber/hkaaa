@@ -1,0 +1,26 @@
+TOKENIZERS_PARALLELISM=false accelerate launch --mixed_precision no \
+--config_file accelerate_config.yaml \
+src/train/main.py \
+--encoder_name vilt \
+--pretrained_model_name ./models/vilt-b32-mlm \
+--climb_data_dir ''  \
+--do_train  \
+--do_eval \
+--do_test \
+--model_path ./models \
+--wandb_freq 5 \
+--output_dir ./logs  \
+--num_workers 2 \
+--batch_size 32 \
+--val_batch_size 128 \
+--comm_round 30 \
+--local_epochs 1 \
+--lr 1e-4  \
+--optimizer_mode dat \
+--adapter_config lora \
+--lora_r 8 \
+--lora_alpha 16 \
+--seed 1 \
+--splits train_small val test_small \
+--do_wandb_logging \
+--ordered_cl_tasks domain
